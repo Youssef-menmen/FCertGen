@@ -1,0 +1,2 @@
+.preview-wrapper{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-md);border:1px solid var(--border-mid)}
+.preview-canvas{display:block;width:100%;height:auto}

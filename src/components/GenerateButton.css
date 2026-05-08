@@ -1,0 +1,137 @@
+.generate-area {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.generate-method-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink-mid, #3D2B0E);
+  margin: 0;
+}
+
+/* Deux boutons côte à côte */
+.generate-buttons-row {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.generate-btn {
+  flex: 1;
+  min-width: 200px;
+  font-size: 0.9rem;
+  padding: 0.85rem 1.25rem;
+  letter-spacing: 0.01em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.generate-btn--loading {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+.generate-btn-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* Bouton outline doré (PDF séparés) */
+.btn-outline-gold {
+  background: transparent;
+  color: var(--gold-dark, #7A5800);
+  border: 2px solid var(--gold, #B8860B);
+  border-radius: var(--radius-sm, 7px);
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-outline-gold:hover:not(:disabled) {
+  background: var(--gold, #B8860B);
+  color: white;
+  box-shadow: 0 4px 16px rgba(184,134,11,0.4);
+  transform: translateY(-1px);
+}
+
+.btn-outline-gold:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Spinners */
+.spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255,255,255,0.35);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.spinner--dark {
+  border: 2px solid rgba(122,88,0,0.3);
+  border-top-color: var(--gold-dark, #7A5800);
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Indications */
+.generate-hints {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.75rem 1rem;
+  background: rgba(245,237,216,0.5);
+  border-radius: var(--radius-sm, 7px);
+  border: 1px solid var(--border, rgba(184,134,11,0.22));
+}
+
+.generate-hint-item {
+  font-size: 0.78rem;
+  color: var(--ink-light, #7A5C30);
+  line-height: 1.5;
+}
+
+.generate-hint-item strong {
+  color: var(--ink-mid, #3D2B0E);
+}
+
+.generate-hint {
+  font-size: 0.82rem;
+  color: var(--ink-faint, #B89870);
+  line-height: 1.5;
+}
+
+/* Dark mode */
+.dark-mode .generate-hints {
+  background: rgba(26,21,16,0.4);
+}
+
+.dark-mode .btn-outline-gold {
+  color: var(--gold-light, #D4A843);
+  border-color: var(--gold-light, #D4A843);
+}
+
+.dark-mode .btn-outline-gold:hover:not(:disabled) {
+  background: var(--gold, #B8860B);
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 560px) {
+  .generate-buttons-row {
+    flex-direction: column;
+  }
+  .generate-btn {
+    min-width: unset;
+  }
+}

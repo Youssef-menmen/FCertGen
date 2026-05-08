@@ -1,0 +1,9 @@
+.csv-drop{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.5rem;border:1.5px dashed var(--border-mid);border-radius:var(--radius);padding:2rem 1.5rem;cursor:pointer;transition:all 0.2s;text-align:center;background:rgba(245,237,216,0.15)}
+.csv-drop:hover,.csv-drop--active{background:rgba(245,237,216,0.45);border-color:var(--gold);transform:scale(1.005);box-shadow:0 0 0 4px rgba(184,134,11,0.08)}
+.csv-drop--loaded{border-color:rgba(21,128,61,0.35);background:rgba(21,128,61,0.03)}
+.csv-icon{font-size:2rem}
+.csv-drop-text{display:flex;flex-direction:column;gap:0.2rem}
+.csv-drop-text strong{font-size:0.9rem;color:var(--ink-mid);font-weight:600}
+.csv-drop-text span{font-size:0.78rem;color:var(--ink-faint)}
+.csv-hint{font-size:0.72rem;color:var(--gold-dark);font-weight:500;opacity:0.8;margin-top:0.15rem}
+.csv-hint code{background:rgba(184,134,11,0.1);padding:0.05em 0.3em;border-radius:3px;font-size:0.9em}

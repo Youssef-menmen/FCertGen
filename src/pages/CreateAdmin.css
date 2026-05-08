@@ -1,0 +1,33 @@
+.ca-overlay{position:fixed;inset:0;background:rgba(26,18,8,0.75);backdrop-filter:blur(6px);z-index:1000;display:flex;align-items:center;justify-content:center;padding:1rem}
+.ca-modal{background:var(--white,#fff);border-radius:16px;border:1px solid rgba(184,134,11,0.25);width:100%;max-width:680px;max-height:90vh;overflow-y:auto;box-shadow:0 24px 80px rgba(0,0,0,0.4);animation:ca-in 0.3s cubic-bezier(0.16,1,0.3,1) both}
+@keyframes ca-in{from{opacity:0;transform:scale(0.96) translateY(16px)}to{opacity:1;transform:none}}
+/* Header géré par ModalHeader.css */
+.ca-close{background:rgba(212,168,67,0.15);border:1px solid rgba(212,168,67,0.3);border-radius:50%;width:32px;height:32px;color:#D4A843;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:all 0.2s}
+.ca-close:hover{background:rgba(212,168,67,0.3)}
+.ca-body{padding:1.75rem}
+.ca-section{font-family:'Playfair Display',serif;font-size:1rem;color:var(--ink,#1A1208);margin:0 0 1rem}
+.ca-form{display:flex;flex-direction:column;gap:1rem}
+.ca-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.ca-field{display:flex;flex-direction:column;gap:0.35rem}
+.ca-field label{font-size:0.8rem;font-weight:600;color:#5C3D1E}
+.ca-field input{padding:0.65rem 0.9rem;border:1.5px solid rgba(184,134,11,0.3);border-radius:8px;font-size:0.875rem;background:#FDFAF3;color:#1A1208;outline:none;transition:border-color 0.2s,box-shadow 0.2s;width:100%}
+.ca-field input:focus{border-color:#B8860B;box-shadow:0 0 0 3px rgba(184,134,11,0.12)}
+.ca-pwd-wrap{position:relative}
+.ca-pwd-wrap input{padding-right:2.5rem;width:100%}
+.ca-pwd-wrap button{position:absolute;right:0.6rem;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:1rem;opacity:0.6}
+.ca-btn{background:linear-gradient(135deg,#7A5800,#B8860B);color:white;border:none;border-radius:8px;padding:0.8rem;font-weight:700;font-size:0.9rem;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 16px rgba(184,134,11,0.35)}
+.ca-btn:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 6px 20px rgba(184,134,11,0.5)}
+.ca-btn:disabled{opacity:0.5;cursor:not-allowed;transform:none}
+.ca-error{background:#FEF2F2;border:1px solid rgba(185,28,28,0.25);border-radius:8px;padding:0.75rem;color:#B91C1C;font-size:0.85rem}
+.ca-success{background:#F0FDF4;border:1px solid rgba(21,128,61,0.25);border-radius:8px;padding:0.75rem;color:#15803D;font-size:0.85rem}
+.ca-list{display:flex;flex-direction:column;gap:0.5rem}
+.ca-row{display:flex;align-items:center;gap:0.85rem;background:#FDFAF3;border:1px solid rgba(184,134,11,0.15);border-radius:10px;padding:0.75rem 1rem;transition:background 0.15s}
+.ca-row:hover{background:#F5EDD8}
+.ca-avatar{width:38px;height:38px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,#7A5800,#D4A843);color:white;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700}
+.ca-info{display:flex;flex-direction:column;flex:1;gap:2px}
+.ca-name{font-size:0.9rem;font-weight:600;color:var(--ink,#1A1208)}
+.ca-meta{font-size:0.72rem;color:#B89870}
+.ca-delete{background:none;border:1px solid rgba(185,28,28,0.2);border-radius:6px;padding:0.3rem 0.5rem;cursor:pointer;transition:all 0.15s;font-size:0.85rem}
+.ca-delete:hover{background:#FEF2F2;border-color:rgba(185,28,28,0.5)}
+.ca-you{font-size:0.72rem;background:rgba(184,134,11,0.1);color:#7A5800;border-radius:999px;padding:0.2rem 0.6rem;font-weight:600}
+@media(max-width:560px){.ca-grid{grid-template-columns:1fr}}
